@@ -14,7 +14,7 @@ FILES = chop_test.c
 # generate object file list
 OBJS = $(patsubst %.c,%.o,$(FILES))
 
-TESTS = chop1.t chop2.t
+TESTS = chop1.t chop2.t chop3.t
 
 all: tests clean
 
