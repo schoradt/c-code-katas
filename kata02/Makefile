@@ -14,12 +14,16 @@ FILES = chop_test.c
 # generate object file list
 OBJS = $(patsubst %.c,%.o,$(FILES))
 
-TESTS = chop1.t
+TESTS = chop1.t chop2.t
 
-all: $(TESTS) clean
+all: tests clean
+
+tests: $(TESTS)
+	for f in $^; do ./$$f; done
 
 %.t: %.o $(OBJS)
 	$(CC) $(CFLAGS) -o $@ $< $(OBJS) $(LDFLAGS)
+	./$@
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
