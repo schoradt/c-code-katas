@@ -30,28 +30,28 @@ Test Data
 
 Here is the Test::Unit code I used when developing my methods. Feel free to add to it. The tests assume that array indices start at zero. You’ll probably have to do a couple of global search-and-replaces to make this compile in your language of choice (unless your enlightened choice happens to be Ruby).
 
-> def test_chop
->   assert_equal(-1, chop(3, []))
->   assert_equal(-1, chop(3, [1]))
->   assert_equal(0,  chop(1, [1]))
->   #
->   assert_equal(0,  chop(1, [1, 3, 5]))
->   assert_equal(1,  chop(3, [1, 3, 5]))
->   assert_equal(2,  chop(5, [1, 3, 5]))
->   assert_equal(-1, chop(0, [1, 3, 5]))
->   assert_equal(-1, chop(2, [1, 3, 5]))
->   assert_equal(-1, chop(4, [1, 3, 5]))
->   assert_equal(-1, chop(6, [1, 3, 5]))
->   #
->   assert_equal(0,  chop(1, [1, 3, 5, 7]))
->   assert_equal(1,  chop(3, [1, 3, 5, 7]))
->   assert_equal(2,  chop(5, [1, 3, 5, 7]))
->   assert_equal(3,  chop(7, [1, 3, 5, 7]))
->   assert_equal(-1, chop(0, [1, 3, 5, 7]))
->   assert_equal(-1, chop(2, [1, 3, 5, 7]))
->   assert_equal(-1, chop(4, [1, 3, 5, 7]))
->   assert_equal(-1, chop(6, [1, 3, 5, 7]))
->   assert_equal(-1, chop(8, [1, 3, 5, 7]))
-> end
+> def test_chop  
+>   assert_equal(-1, chop(3, []))  
+>   assert_equal(-1, chop(3, [1]))  
+>   assert_equal(0,  chop(1, [1]))  
+>   #  
+>   assert_equal(0,  chop(1, [1, 3, 5]))  
+>   assert_equal(1,  chop(3, [1, 3, 5]))  
+>   assert_equal(2,  chop(5, [1, 3, 5]))  
+>   assert_equal(-1, chop(0, [1, 3, 5]))  
+>   assert_equal(-1, chop(2, [1, 3, 5]))  
+>   assert_equal(-1, chop(4, [1, 3, 5]))  
+>   assert_equal(-1, chop(6, [1, 3, 5]))  
+>   #  
+>   assert_equal(0,  chop(1, [1, 3, 5, 7]))  
+>   assert_equal(1,  chop(3, [1, 3, 5, 7]))  
+>   assert_equal(2,  chop(5, [1, 3, 5, 7]))  
+>   assert_equal(3,  chop(7, [1, 3, 5, 7]))  
+>   assert_equal(-1, chop(0, [1, 3, 5, 7]))  
+>   assert_equal(-1, chop(2, [1, 3, 5, 7]))  
+>   assert_equal(-1, chop(4, [1, 3, 5, 7]))  
+>   assert_equal(-1, chop(6, [1, 3, 5, 7]))  
+>   assert_equal(-1, chop(8, [1, 3, 5, 7]))  
+> end  
 
 (taken from http://codekata.com/kata/kata02-karate-chop/)
