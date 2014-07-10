@@ -35,7 +35,7 @@ int chop(int target, int* array, size_t size)
         } else {
             return -1;
         }
-    } else {
+    } else { // wider array are split into two parts and we search in the part in that the element should be
         int split = (size / 2);
 
         if(target < array[split]) {

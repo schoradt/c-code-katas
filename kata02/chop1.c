@@ -24,17 +24,28 @@
 #include "chop.h"
 #include <stdio.h>
 
+/**
+ * Function that computes the position of an element in an array 
+ * by binary search.
+ *
+ * @param target target value to search
+ * @param array  array to search in
+ * @param start  start index
+ * @param end    end index
+ *
+ * @return index of the target element or -1 if not found
+ */
 int chop_recursive(int target, int* array, int start, int end)
 {
-    if(end < start) {
+    if(end < start) { // handle empty array
         return -1;
-    } else if(start == end) {
+    } else if(start == end) { // handle array with 1 element
         if(array[start] == target) {
             return start;
         } else {
             return -1;
         }
-    } else {
+    } else { // bigger arrays are split in two parts and we search in the part the element should be
         int split = start + ((end - start) / 2) + 1;
 
         if(target < array[split]) {
@@ -47,5 +58,6 @@ int chop_recursive(int target, int* array, int start, int end)
 
 int chop(int target, int* array, size_t size)
 {
+    // class recursive function with start and end index
     return chop_recursive(target, array, 0, size - 1);
 }

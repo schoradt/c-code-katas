@@ -34,6 +34,7 @@ int chop(int target, int* array, size_t size)
 
     int split = -1;
 
+    // as long as the array is wider that one
     while(start < end) {
         split = start + ((end - start) / 2) + 1;
         
@@ -44,6 +45,7 @@ int chop(int target, int* array, size_t size)
         }
     };
 
+    // check if the element matches
     if(start == end && target == array[start]) {
         return start;
     }
