@@ -53,3 +53,5 @@ Here is the Test::Unit code I used when developing my methods. Feel free to add 
 >   assert_equal(-1, chop(6, [1, 3, 5, 7]))
 >   assert_equal(-1, chop(8, [1, 3, 5, 7]))
 > end
+
+(taken from http://codekata.com/kata/kata02-karate-chop/)
