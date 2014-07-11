@@ -29,14 +29,9 @@ int chop(int target, int* array, size_t size)
     int start = 0;
     int end = size - 1;
 
-    // handle empty array
-    if(end < start) return -1;
-
-    int split = -1;
-
     // as long as the array is wider that one
     while(start < end) {
-        split = start + ((end - start) / 2) + 1;
+        int split = start + ((end - start) / 2) + 1;
         
         if(target < array[split]) {
             end = split - 1;
@@ -50,5 +45,6 @@ int chop(int target, int* array, size_t size)
         return start;
     }
 
+    // nothing found
     return -1;
 }
